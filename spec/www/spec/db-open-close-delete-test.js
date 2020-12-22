@@ -1257,7 +1257,8 @@ var mytests = function() {
           }
         }
 
-        it(suiteName + ' test sqlitePlugin.deleteDatabase()', function (done) {
+        // XXX TBD ???:
+        xit(suiteName + ' test sqlitePlugin.deleteDatabase()', function (done) {
           var db = openDatabase("DB-Deletable", "1.0", "Demo", DEFAULT_SIZE);
 
           function createAndInsertStuff() {
@@ -1745,8 +1746,9 @@ var mytests = function() {
           });
         });
 
+        // XXX TBD ???:
         // (Was needed to test support for an enterprise application)
-        test_it(suiteName + " delete then re-open (location: 'default') allows subsequent queries to run", function () {
+        xtest_it(suiteName + " delete then re-open (location: 'default') allows subsequent queries to run", function () {
           var dbName = "test-database-delete-and-reopen.db";
           var dbargs = {name: dbName, iosDatabaseLocation: 'default'};
 
@@ -1786,9 +1788,10 @@ var mytests = function() {
           });
         });
 
+        // XXX TBD ???:
         // XXX SEE BELOW: repeat scenario but wait for open callback before close/delete/reopen
         // (Was needed to test support for an enterprise application)
-        test_it(suiteName + ' immediate close, then delete then re-open allows subsequent queries to run', function () {
+        xtest_it(suiteName + ' immediate close, then delete then re-open allows subsequent queries to run', function () {
           if (isAppleMobileOS || isMac) pending('CURRENTLY BROKEN on iOS/macOS (background processing implementation)');
 
           var dbName = "Immediate-close-delete-Reopen.db";
@@ -1828,7 +1831,8 @@ var mytests = function() {
           });
         });
 
-        test_it(suiteName + ' close (after open cb), then delete & re-open allows subsequent queries to run', function () {
+        // XXX TBD ???:
+        xtest_it(suiteName + ' close (after open cb), then delete & re-open allows subsequent queries to run', function () {
           var dbName = 'test-close-after-opencb-then-delete-and-reopen.db';
           var dbargs = {name: dbName, iosDatabaseLocation: 'Library'};
 
@@ -1994,8 +1998,9 @@ var mytests = function() {
           });
         });
 
+        // XXX TBD ???:
         // (Was needed to test support for an enterprise application)
-        test_it(suiteName + ' repeatedly open and delete database (4x)', function () {
+        xtest_it(suiteName + ' repeatedly open and delete database (4x)', function () {
           var dbName = 'test-repeatedly-open-and-delete-4x.db';
           var dbargs = {name: dbName, iosDatabaseLocation: 'Documents'};
 
@@ -2057,8 +2062,9 @@ var mytests = function() {
           });
         });
 
+        // XXX TBD ???:
         // (Was needed to test support for an enterprise application)
-        test_it(suiteName + ' repeatedly open and delete database faster (5x)', function () {
+        xtest_it(suiteName + ' repeatedly open and delete database faster (5x)', function () {
           // TBD POSSIBLY BROKEN on iOS/macOS ...
           // if (!isAndroid && !isWindows) pending(...);
           // TBD CURRENTLY BROKEN DUE TO BUG 666 WORKAROUND SOLUTION

@@ -1,10 +1,10 @@
-# Cordova/PhoneGap sqlite storage - premium enterprise version with premium stability and performance improvements with limited extra features
+# Cordova/PhoneGap SQLeet storage - premium enterprise version with premium stability and performance improvements
 
-Native SQLite component with API based on HTML5/[Web SQL (DRAFT) API](http://www.w3.org/TR/webdatabase/) for the following platforms:
+Native SQLeet component (<https://github.com/resilar/sqleet>) with API based on HTML5/[Web SQL (DRAFT) API](http://www.w3.org/TR/webdatabase/) for the following platforms:
 - Android
-- iOS
-- macOS ("osx" platform)
-- Windows 10 (UWP) DESKTOP and MOBILE (see below for major limitations)
+- ~~iOS~~ - no encryption at this point
+- ~~macOS~~ ("osx" platform) - no encryption at this point
+- ~~Windows 10 (UWP) DESKTOP and MOBILE (see below for major limitations)~~ - no encryption at this point
 
 <!-- [TBD] HIDE browser usage notes for now (at least):
 Browser platform is currently supported with some limitations as described in [browser platform usage notes](#browser-platform-usage-notes) section below, will be supported with more features such as numbered parameters and SQL batch API in the near future.
@@ -193,12 +193,14 @@ See the [Sample section](#sample) for a sample with a more detailed explanation 
   - Cordova pre-7.0.0 do not automatically save the state of added plugins and platforms (`--save` flag is needed for Cordova pre-7.0.0)
   - It may be needed to use `cordova prepare` in case of cordova-ios pre-4.3.0 (Cordova CLI `6.4.0`).
   - Cordova versions older than `6.0.0` are missing the `cordova-ios@4.0.0` security fixes.
+- XXX TODO SQLeet version information:
+  - `v0.31.1` for Android built from: https://github.com/brodybits/android-sqleet2020-evplus-native-driver-free
 - This plugin version uses a `before_plugin_install` hook to fetch and install `cordova-sqlite-evplus-ext-free-dependencies` (with SQLite3 and Android-sqlite-evplus-ext-native-driver-free components) from GitHub.
 - Use of other systems such as Cordova Plugman, PhoneGap CLI, PhoneGap Build, and Intel XDK is no longer supported by this plugin version since they do not honor the `before_plugin_install` hook. The supported solution is to use [litehelpers / Cordova-sqlite-evcore-extbuild-free](https://github.com/litehelpers/Cordova-sqlite-evcore-extbuild-free) (GPL or commercial license terms); deprecated alternative with permissive license terms is available at: [brodybits / cordova-sqlite-legacy-build-support](https://github.com/brodybits/cordova-sqlite-legacy-build-support) (very limited testing, very limited updates).
-- This plugin version includes the following extra (non-standard) features:
+- This plugin version includes the following extra (non-standard) features, not supported for Android at this point:
   - BASE64 integrated from [brodybits / sqlite3-base64](https://github.com/brodybits/sqlite3-base64), using [brodybits / libb64-encode](https://github.com/brodybits/libb64-encode) (based on <http://libb64.sourceforge.net/> by Chris Venter, public domain)
   - REGEXP for Android (default Android-sqlite-connector database implementation), iOS, and macOS using [brodybits / sqlite3-regexp-cached](https://github.com/brodybits/sqlite3-regexp-cached) (based on <http://git.altlinux.org/people/at/packages/?p=sqlite3-pcre.git> by Alexey Tourbin, public domain)
-- SQLite `3.32.3` included when building (all platforms), with the following compile-time definitions:
+- XXX TBD SQLite / SQLeet included when building, with the following compile-time definitions:
   - `SQLITE_THREADSAFE=1`
   - `SQLITE_DEFAULT_SYNCHRONOUS=3` (EXTRA DURABLE build setting) ref: [xpbrew/cordova-sqlite-storage#736](https://github.com/xpbrew/cordova-sqlite-storage/issues/736)
   - `SQLITE_LOCKING_STYLE=1` on iOS/macOS ONLY
