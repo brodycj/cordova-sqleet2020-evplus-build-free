@@ -1,9 +1,9 @@
 {
-  "name": "cordova-plugin-sqlite-evplus-ext-common-free",
-  "version": "0.4.1-rc01",
-  "description": "Cordova/PhoneGap sqlite storage - free evplus enterprise version with premium stability and performance improvements including workaround for large SELECT results on Android (version with external sqlite3 dependencies)",
+  "name": "cordova-sqlite-sqleet-evplus-build-free",
+  "version": "0.0.1-dev",
+  "description": "Cordova/PhoneGap SQLeet storage - free evplus enterprise version with premium stability and performance improvements including workaround for large SELECT results on Android (with external sqlite3 dependencies for iOS/macOS/Windows)",
   "cordova": {
-    "id": "cordova-plugin-sqlite-evplus-ext-common-free",
+    "id": "cordova-sqlite-sqleet-evplus-build-free",
     "platforms": [
       "android",
       "ios",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/litehelpers/cordova-plugin-sqlite-evplus-ext-common-free.git"
+    "url": "https://github.com/brodybits/cordova-sqlcipher-evplus-build-free.git"
   },
   "keywords": [
     "sqlite",
@@ -26,9 +26,9 @@
   "author": "various",
   "license": "GPL-3.0 OR Commercial",
   "bugs": {
-    "url": "https://github.com/litehelpers/cordova-plugin-sqlite-evplus-ext-common-free/issues"
+    "url": "https://github.com/brodybits/cordova-sqlcipher-evplus-build-free/issues"
   },
-  "homepage": "https://github.com/litehelpers/cordova-plugin-sqlite-evplus-ext-common-free",
+  "homepage": "https://github.com/brodybits/cordova-sqlcipher-evplus-build-free",
   "dependencies": {
     "cordova-sqlite-evplus-ext-free-dependencies": "github:brodybits/cordova-sqlite-evplus-ext-free-dependencies#0.1.0-rc02"
   },

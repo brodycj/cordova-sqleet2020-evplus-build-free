@@ -1,5 +1,9 @@
 # Changes
 
+## cordova-sqlite-sqleet-evplus-build-free 0.0.1-dev
+
+- SQLeet support with evplus enhancements for Android
+
 ## cordova-plugin-sqlite-evplus-ext-common-free 0.4.1-rc01
 
 - SQLite 3.32.3 update from github:brodybits/cordova-sqlite-evplus-ext-free-dependencies#0.1.0-rc02
