@@ -191,11 +191,11 @@
 
                 sqlite3_base64_init(db);
 
-                // for SQLCipher version:
-                // NSString *dbkey = [options objectForKey:@"key"];
-                // const char *key = NULL;
-                // if (dbkey != NULL) key = [dbkey UTF8String];
-                // if (key != NULL) sqlite3_key(db, key, strlen(key));
+                // [SQLeet]
+                NSString *dbkey = [options objectForKey:@"key"];
+                const char *key = NULL;
+                if (dbkey != NULL) key = [dbkey UTF8String];
+                if (key != NULL) sqlite3_key(db, key, strlen(key));
 
                 // Attempt to read the SQLite master table [to support SQLCipher version]:
                 if(sqlite3_exec(db, (const char*)"SELECT count(*) FROM sqlite_master;", NULL, NULL, NULL) == SQLITE_OK) {

@@ -2,6 +2,7 @@
 
 # cordova-sqleet2020-evplus-build-free 0.0.2-dev
 
+- support SQLeet on iOS & macOS ("osx")
 - move Android SQLeet JAR into src/dependencies
 - cordova-sqleet2020-evplus-build-free doc fixes
 
