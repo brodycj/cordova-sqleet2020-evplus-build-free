@@ -40,7 +40,7 @@ New SQLite plugin design with a simpler API is in progress with a working demo -
 
 in an upcoming major release - see [`xpbrew/cordova-sqlite-storage#922`](https://github.com/xpbrew/cordova-sqlite-storage/issues/922):
 
-- drop support for Android pre-5.1, which will also be dropped by `cordova-android`, including deprecated `armeabi` target (superseded by `armeabi-v7a`, seems to be not supported by Android 5.0) - more info in [`xpbrew/cordova-sqlite-storage#922`](https://github.com/xpbrew/cordova-sqlite-storage/issues/922)
+- ~~drop support for Android pre-5.1, which will also be dropped by `cordova-android`, including deprecated `armeabi` target (superseded by `armeabi-v7a`, seems to be not supported by Android 5.0) - more info in [`xpbrew/cordova-sqlite-storage#922`](https://github.com/xpbrew/cordova-sqlite-storage/issues/922)~~ (already gone)
 - error `code` will always be `0` (which is already the case on Windows); actual SQLite3 error code will be part of the error `message` member whenever possible (see [`xpbrew/cordova-sqlite-storage#821`](https://github.com/xpbrew/cordova-sqlite-storage/issues/821))
 - drop support for location: 0-2 values in openDatabase call (please use `location: 'default'` or `iosDatabaseLocation` setting in openDatabase as documented below)
 
@@ -197,7 +197,7 @@ See the [Sample section](#sample) for a sample with a more detailed explanation 
   - `v0.31.1` for Android built from: https://github.com/brodybits/android-sqleet2020-evplus-native-driver-free
 - This plugin version uses a `before_plugin_install` hook to fetch and install `cordova-sqlite-evplus-ext-free-dependencies` (with SQLite3 and Android-sqlite-evplus-ext-native-driver-free components) from GitHub.
 - Use of other systems such as Cordova Plugman, PhoneGap CLI, PhoneGap Build, and Intel XDK is no longer supported by this plugin version since they do not honor the `before_plugin_install` hook. The supported solution is to use [litehelpers / Cordova-sqlite-evcore-extbuild-free](https://github.com/litehelpers/Cordova-sqlite-evcore-extbuild-free) (GPL or commercial license terms); deprecated alternative with permissive license terms is available at: [brodybits / cordova-sqlite-legacy-build-support](https://github.com/brodybits/cordova-sqlite-legacy-build-support) (very limited testing, very limited updates).
-- This plugin version includes the following extra (non-standard) features, not supported for Android at this point:
+- This plugin version includes the following extra (non-standard) features:
   - BASE64 integrated from [brodybits / sqlite3-base64](https://github.com/brodybits/sqlite3-base64), using [brodybits / libb64-encode](https://github.com/brodybits/libb64-encode) (based on <http://libb64.sourceforge.net/> by Chris Venter, public domain)
   - REGEXP for Android (default Android-sqlite-connector database implementation), iOS, and macOS using [brodybits / sqlite3-regexp-cached](https://github.com/brodybits/sqlite3-regexp-cached) (based on <http://git.altlinux.org/people/at/packages/?p=sqlite3-pcre.git> by Alexey Tourbin, public domain)
 - XXX TBD SQLite / SQLeet included when building, with the following compile-time definitions:
@@ -243,7 +243,7 @@ See the [Sample section](#sample) for a sample with a more detailed explanation 
   - Windows platform version uses `UTF-16le` internal database encoding while the other platform versions use `UTF-8` internal encoding. (`UTF-8` internal encoding is preferred ref: [xpbrew/cordova-sqlite-storage#652](https://github.com/xpbrew/cordova-sqlite-storage/issues/652))
   - Known issue with database names that contain certain US-ASCII punctuation and control characters (see below)
 - The macOS platform version ("osx" platform) is not tested in a release build and should be considered pre-alpha.
-- _Android versions supported: 2.3.3 - 8.1, P (API levels 10 - 27, P) on `armeabi`, `armeabi-v7a`, `x86`, `x86_64`, `arm64-v8a`, depending on Cordova version ref: <https://cordova.apache.org/docs/en/latest/guide/platforms/android/>_
+- _Android versions supported: 2.3.3 - 8.1, P (API levels 10 - 27, P) on ~~`armeabi`,~~ `armeabi-v7a`, `x86`, `x86_64`, `arm64-v8a`, depending on Cordova version ref: <https://cordova.apache.org/docs/en/latest/guide/platforms/android/>_
 - iOS versions supported: 8.x / 9.x / 10.x / 11.x / 12.x (see [deviations section](#deviations) below for differences in case of WKWebView)
 - FTS3, FTS4, and R-Tree are fully tested and supported for all target platforms in this version branch.
 - Default `PRAGMA journal_mode` setting (*tested*):
