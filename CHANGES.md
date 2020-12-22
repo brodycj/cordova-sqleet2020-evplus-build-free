@@ -1,6 +1,8 @@
 # Changes
 
-## cordova-sqleet2020-evplus-build-free 0.0.1-dev
+# cordova-sqleet2020-evplus-build-free 0.0.2-dev
+
+# cordova-sqleet2020-evplus-build-free 0.0.1-dev
 
 - SQLeet support with evplus enhancements for Android
 
