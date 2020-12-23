@@ -107,7 +107,7 @@ var mytests = function() {
               if (isAndroid)
                 expect(rs.rows.item(0).myResult).toBe('3.31.1');
               else
-                expect(rs.rows.item(0).myResult).toBe('3.32.3');
+                expect(rs.rows.item(0).myResult).toBe('3.31.1');
 
               // Close (plugin only) & finish:
               (isWebSql) ? done() : db.close(done, done);

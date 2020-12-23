@@ -119,6 +119,8 @@ describe('cipher (...) encryption test(s)', function() {
             ], function() {
               db.close(function () {
                 openDatabase({name: dbName, key: "another-password"}, function (db) {
+                  // [TBD] SHOULD ONLY get here on Android (...)
+                  if (!isAndroid) done.fail();
                   // SHOULD NOT BE ABLE TO READ THE DATA
                   db.executeSql('SELECT * FROM tt', null, function(rs) {
                     // NOT EXPECTED:
@@ -132,11 +134,13 @@ describe('cipher (...) encryption test(s)', function() {
 
                 }, function (error) {
                   // FUTURE TBD (...)
-                  expect('Behavior changed update test').toBe('--');
-                  done.fail();
+                  if (isAndroid) expect('Behavior changed on Android update test').toBe('--');
+                  expect(error).toBeDefined();
+                  expect(error.message).toBeDefined();
+                  done();
                 });
               }, function (error) {
-                // NOT EXPECTED:
+                // Close error NOT EXPECTED:
                 expect(false).toBe(true);
                 expect(error).toBeDefined();
                 expect(error.message).toBeDefined();
