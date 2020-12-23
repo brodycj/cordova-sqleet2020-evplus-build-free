@@ -106,7 +106,8 @@
     </platform>
 
     <!-- windows -->
-    <platform name="windows">
+    <!-- TBD NOT ENABLED at this point -->
+    <platform name="windows-not-enabled">
         <js-module src="src/windows/sqlite-proxy.js" name="SQLiteProxy">
             <runs />
         </js-module>

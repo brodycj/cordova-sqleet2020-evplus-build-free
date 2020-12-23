@@ -4,7 +4,7 @@ Native SQLeet component (<https://github.com/resilar/sqleet>) with API based on 
 - Android
 - iOS
 - macOS ("osx" platform)
-- ~~Windows 10 (UWP) DESKTOP and MOBILE (see below for major limitations)~~ - no encryption at this point
+- ~~Windows 10 (UWP) DESKTOP and MOBILE (see below for major limitations)~~ - __not enabled__ at this point
 
 <!-- [TBD] HIDE browser usage notes for now (at least):
 Browser platform is currently supported with some limitations as described in [browser platform usage notes](#browser-platform-usage-notes) section below, will be supported with more features such as numbered parameters and SQL batch API in the near future.
