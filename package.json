@@ -1,7 +1,7 @@
 {
   "name": "cordova-sqleet2020-evplus-build-free",
   "version": "0.0.2-dev",
-  "description": "Cordova/PhoneGap SQLeet storage - free evplus enterprise version with premium stability and performance improvements including workaround for large SELECT results on Android (with external sqlite3 dependencies for iOS/macOS/Windows)",
+  "description": "Cordova/PhoneGap SQLeet storage - free evplus enterprise version with premium stability and performance improvements including workaround for large SELECT results on Android",
   "cordova": {
     "id": "cordova-sqleet2020-evplus-build-free",
     "platforms": [
@@ -29,9 +29,6 @@
     "url": "https://github.com/brodybits/cordova-sqleet2020-evplus-build-free/issues"
   },
   "homepage": "https://github.com/brodybits/cordova-sqleet2020-evplus-build-free",
-  "dependencies": {
-    "cordova-sqlite-evplus-ext-free-dependencies": "github:brodybits/cordova-sqlite-evplus-ext-free-dependencies#0.1.0-rc02"
-  },
   "scripts": {
     "clean-spec": "rm -rf spec/[mnp]* && git cl spec/config.xml && git status --ignored",
     "prepare-js": "coffee -p SQLitePlugin.coffee.md > www/SQLitePlugin.js",

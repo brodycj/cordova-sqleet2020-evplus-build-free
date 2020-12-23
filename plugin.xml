@@ -4,7 +4,7 @@
     id="cordova-sqleet2020-evplus-build-free"
     version="0.0.2-dev">
 
-    <name>Cordova SQLeet storage - free evplus enterprise version with premium stability performance improvements including workaround for large SELECT results on Android (with external sqlite3 dependencies for iOS/macOS/Windows)</name>
+    <name>Cordova SQLeet storage - free evplus enterprise version with premium stability performance improvements including workaround for large SELECT results on Android</name>
 
     <license>GPL-3.0 OR Commercial</license>
 
@@ -13,8 +13,7 @@
     <description>Native interface to SQLite for PhoneGap/Cordova. Allows you to use more storage and provides more flexibility than the standard Web SQL database (window.openDatabase).</description>
     <author>Litehelpers/Various</author>
 
-    <!-- THANKS to AllJoyn-Cordova / cordova-plugin-alljoyn: -->
-    <hook type="before_plugin_install" src="scripts/beforePluginInstall.js" />
+    <!-- no before_plugin_install hook in this plugin version -->
 
     <js-module src="www/SQLitePlugin.js" name="SQLitePlugin">
         <clobbers target="SQLitePlugin" />

@@ -46,9 +46,7 @@ in an upcoming major release - see [`xpbrew/cordova-sqlite-storage#922`](https:/
 
 ## About this plugin version
 
-Premium enterprise version with additional performance and stability improvements for Android, iOS, and macOS, including workaround for large SELECT results on Android - with limited extra features (missing pre-populated database support), using the `before_plugin_install` hook to fetch the sqlite3 component dependencies from `cordova-sqlite-evplus-ext-free-dependencies` on GitHub.
-
-NOTE: This plugin version has external sqlite3 dependencies that are installed by a before_plugin_install hook. FUTURE TBD sqlite3 dependencies will be included if needed by any commercial users for PhoneGap Build or any other build tools.
+Premium enterprise version with additional performance and stability improvements for Android, iOS, and macOS, including workaround for large SELECT results on Android - with limited extra features (missing pre-populated database support), with all dependencies included.
 
 <!-- FUTURE TBD critical bug notices for this plugin version -->
 
@@ -196,8 +194,7 @@ See the [Sample section](#sample) for a sample with a more detailed explanation 
 - XXX TODO SQLeet version information:
   - `v0.31.1` for Android built from: https://github.com/brodybits/android-sqleet2020-evplus-native-driver-free
   - `v0.31.1` for iOS & macOS ("osx")
-- This plugin version uses a `before_plugin_install` hook to fetch and install `cordova-sqlite-evplus-ext-free-dependencies` (with SQLite3 and Android-sqlite-evplus-ext-native-driver-free components) from GitHub.
-- Use of other systems such as Cordova Plugman, PhoneGap CLI, PhoneGap Build, and Intel XDK is no longer supported by this plugin version since they do not honor the `before_plugin_install` hook. The supported solution is to use [litehelpers / Cordova-sqlite-evcore-extbuild-free](https://github.com/litehelpers/Cordova-sqlite-evcore-extbuild-free) (GPL or commercial license terms); deprecated alternative with permissive license terms is available at: [brodybits / cordova-sqlite-legacy-build-support](https://github.com/brodybits/cordova-sqlite-legacy-build-support) (very limited testing, very limited updates).
+- This plugin version has all dependencies included and should work with build systems such as Intel XDK.
 - This plugin version includes the following extra (non-standard) features:
   - BASE64 integrated from [brodybits / sqlite3-base64](https://github.com/brodybits/sqlite3-base64), using [brodybits / libb64-encode](https://github.com/brodybits/libb64-encode) (based on <http://libb64.sourceforge.net/> by Chris Venter, public domain)
   - REGEXP for Android (default Android-sqlite-connector database implementation), iOS, and macOS using [brodybits / sqlite3-regexp-cached](https://github.com/brodybits/sqlite3-regexp-cached) (based on <http://git.altlinux.org/people/at/packages/?p=sqlite3-pcre.git> by Alexey Tourbin, public domain)
@@ -300,7 +297,7 @@ and window functions
   - Keeps sqlite database in known, platform specific user data location on all supported platforms (Android/iOS/macOS/Windows), which can be reconfigured on iOS/macOS. Whether or not the database on the iOS platform is synchronized to iCloud depends on the selected database location.
   - No arbitrary size limit. SQLite limits described at: <http://www.sqlite.org/limits.html>
 - Also validated for multi-page applications by internal test selfTest function.
-- This project is self-contained though with sqlite3 dependencies auto-fetched by npm. There are no dependencies on other plugins such as cordova-plugin-file.
+- This project is self-contained ~~though with sqlite3 dependencies auto-fetched by npm~~. There are no dependencies on other plugins such as cordova-plugin-file.
 - Windows platform version uses a customized version of the performant [doo / SQLite3-WinRT](https://github.com/doo/SQLite3-WinRT) C++ component.
 - [SQLCipher](https://www.zetetic.net/sqlcipher/) support for Android/iOS/macOS/Windows is available in: [brodybits / cordova-sqlcipher-adapter](https://github.com/brodybits/cordova-sqlcipher-adapter)
 - Intellectual property:
@@ -1805,8 +1802,7 @@ function closeDB() {
 - `SQLitePlugin.coffee.md`: platform-independent (Literate CoffeeScript, can be compiled with a recent CoffeeScript (1.x) compiler)
 - `www`: platform-independent Javascript as generated from `SQLitePlugin.coffee.md` using `coffeescript@1` (and committed!)
 - `src`: platform-specific source code
-- `node_modules`: placeholder for external dependencies
-- `scripts`: installation hook script to fetch the external dependencies via `npm`
+- `scripts`: _helper script for testing only_
 - `spec`: test suite using Jasmine (`2.5.2`), also passes on (WebKit) Web SQL on Android, iOS, Safari desktop browser, and Chrome desktop browser
 - `tests`: very simple Jasmine test suite that is run on Circle CI (Android platform) and Travis CI (iOS platform) (used as a placeholder)
 
