@@ -2,6 +2,8 @@
 
 # cordova-sqleet2020-evplus-build-free 0.0.3-dev
 
+- use -O3 flag when building sqleet.c on iOS
+
 # cordova-sqleet2020-evplus-build-free 0.0.2-dev
 
 - remove use of external dependencies from this plugin version
