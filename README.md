@@ -18,6 +18,8 @@ This plugin version is available under GPL v3 (<https://www.gnu.org/licenses/gpl
 
 ## WARNINGS
 
+- IMPORTANT EXPORT REQUIREMENTS ref: <https://github.com/brodybits/ask-me-anything/issues/20>
+- SQLeet as of December 2020 is missing some updates from SQLite with defense against SQL injection attacks. It is important to never execute SQL statements based on anything from the internet. Data from the internet should be put into parameters using `?` placeholders instead.
 - **Multiple SQLite corruption problem** - see section below & [`xpbrew/cordova-sqlite-storage#626`](https://github.com/xpbrew/cordova-sqlite-storage/issues/626)
 - **Breaking changes coming soon** - see section nearby & see [`xpbrew/cordova-sqlite-storage#922`](https://github.com/xpbrew/cordova-sqlite-storage/issues/922)
 
