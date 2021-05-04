@@ -1,5 +1,7 @@
 # Changes
 
+# cordova-sqleet2020-evplus-build-free 0.0.4-dev
+
 # cordova-sqleet2020-evplus-build-free 0.0.3
 
 - use -O3 flag when building sqleet.c on iOS
