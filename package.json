@@ -1,6 +1,6 @@
 {
   "name": "cordova-sqleet2020-evplus-build-free",
-  "version": "0.0.4-dev",
+  "version": "0.1.0-dev",
   "description": "Cordova/PhoneGap SQLeet storage - free evplus enterprise version with premium stability and performance improvements including workaround for large SELECT results on Android",
   "cordova": {
     "id": "cordova-sqleet2020-evplus-build-free",

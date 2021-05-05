@@ -1,5 +1,7 @@
 # Changes
 
+# cordova-sqleet2020-evplus-build-free 0.1.0-dev
+
 # cordova-sqleet2020-evplus-build-free 0.0.4-dev
 
 - fix: remove extra "keytest.db" from open database file name - BREAKING CHANGE
