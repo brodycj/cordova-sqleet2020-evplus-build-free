@@ -201,7 +201,7 @@ See the [Sample section](#sample) for a sample with a more detailed explanation 
   - It may be needed to use `cordova prepare` in case of cordova-ios pre-4.3.0 (Cordova CLI `6.4.0`).
   - Cordova versions older than `6.0.0` are missing the `cordova-ios@4.0.0` security fixes.
 - XXX TODO SQLeet version information:
-  - `v0.31.1` for Android built from: https://github.com/brodybits/android-sqleet2020-evplus-native-driver-free
+  - `v0.31.1` for Android built from: <https://github.com/brodybits/android-sqleet2020-evplus-ndk-driver-free>
   - `v0.31.1` for iOS & macOS ("osx")
 - This plugin version has all dependencies included and should work with build systems such as Intel XDK.
 - This plugin version includes the following extra (non-standard) features:
