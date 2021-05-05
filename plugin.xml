@@ -34,10 +34,8 @@
         <source-file src="src/android/io/sqlc/SQLiteConnectorDatabase.java" target-dir="src/io/sqlc"/>
          -->
 
-        <source-file src="src/android/io/sqlc/EVPlusNativeDriver.java" target-dir="src/io/sqlc"/>
-
-        <!-- sqleet2020-evplus-native-driver.jar [native libs in jar]: -->
-        <lib-file src="src/dependencies/sqleet2020-evplus-native-driver.jar" />
+        <!-- ... -->
+        <lib-file src="src/dependencies/sqleet2020-evplus-ndk-driver.jar" />
     </platform>
 
     <!-- iOS -->

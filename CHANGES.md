@@ -2,6 +2,19 @@
 
 # cordova-sqleet2020-evplus-build-free 0.1.0-dev
 
+## cordova-plugin-sqlite-evplus-ext-common-free 0.6.0-pre01
+
+- update evplus NDK library - solution for Android 11 with target SDK 30, from cordova-sqlite-evplus-ext-free-dependencies@0.3.0
+
+## cordova-plugin-sqlite-evplus-ext-common-free 0.5.0-pre01
+
+- updates from cordova-sqlite-evplus-ext-free-dependencies 0.2.0-rc01
+  - BREAKING: drop Android pre-5.1 support
+  - update SQLite to 3.35.4
+  - fix for emojis and other 4-byte UTF-8 characters on Android
+  - update affected test cases
+  - update documentation
+
 # cordova-sqleet2020-evplus-build-free 0.0.4-dev
 
 - fix: remove extra "keytest.db" from open database file name - BREAKING CHANGE
