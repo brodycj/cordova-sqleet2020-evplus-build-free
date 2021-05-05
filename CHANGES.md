@@ -1,6 +1,6 @@
 # Changes
 
-# cordova-sqleet2020-evplus-build-free 0.1.0-dev
+# cordova-sqleet2020-evplus-build-free 0.1.0
 
 ## cordova-plugin-sqlite-evplus-ext-common-free 0.6.0-pre01
 
